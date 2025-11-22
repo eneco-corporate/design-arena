@@ -19,7 +19,7 @@ export default function Home() {
     setPrompt(inputPrompt)
     setShowAdvertising(true)
     
-    // URLを更新（voteページにリダイレクト）
+    // URLを更新（voteページにリダイレクト
     const encodedPrompt = encodeURIComponent(inputPrompt)
     router.push(`/vote?prompt=${encodedPrompt}&category=Website&autostart=true`)
     
