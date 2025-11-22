@@ -129,7 +129,8 @@ export default function ModelCards({ prompt, isGenerating, results, onGeneration
       const right = shuffled[1]
       
       const pairKey = `${left.id}-${right.id}`
-      const newUsedPairs = new Set([...prevUsedPairs, pairKey])
+      const newUsedPairs = new Set(prevUsedPairs)
+      newUsedPairs.add(pairKey)
       
       setCurrentPair({
         left,
